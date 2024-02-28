@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllTrade</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/jpg" href="img/icono/bootstrap-fill.svg">
+    <style>
+        body {
+            background: #e3e6e6;
+        }
+        .bi {
+            /* Color de Iconos */
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+    </style>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Iconos de Bootstrap -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="logo" viewBox="0 0 16 16">
+            <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
+            <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
+        </symbol>
+        <symbol id="cart" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+    </svg>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand d-lg-none" href="#">AllTrade</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-0 mx-lg-5">
+                        <a class="nav-link" href="#">
+                            <svg class="bi" width="24" height="24"><use xlink:href="#logo"/></svg>
+                            <span class="visually-hidden">Logo</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="products.html">Productos</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="#">Características</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="#">Empresa</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="#">Precios</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-5">
+                        <a class="nav-link" href="#">
+                            <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
+                            <span class="visually-hidden">Carrito de compras</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+
+    <div class="container-fluid" style="max-width: 1400px;">
+        <!-- Carrusel -->
+        <div class="row mb-4 d-none d-md-block">
+            <div class="col">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://via.placeholder.com/1344x430" class="d-block w-100 mx-auto rounded" alt="Carrusel de imágenes 1" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/1344x430" class="d-block w-100 mx-auto rounded" alt="Carrusel de imágenes 2" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/1344x430" class="d-block w-100 mx-auto rounded" alt="Carrusel de imágenes 3" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon rounded" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon rounded" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </div>        
+
+        <!-- Tarjetas exclusivas -->
+        <h5>Camisas para Caballeros</h5>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4">
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen de producto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">Camisas de algodón y lino para hombre</a></h5>
+                        <p class="card-text text-limit-two-lines">Estilo casual, manga larga, estilo Henley, hippie, playa, camisetas de vacaciones con bolsillo</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                ★★★★☆
+                            </div>
+                            <div>
+                                <span class="text-secondary">(7.670)</span>
+                            </div>
+                        </div>
+                        <p class="card-text fw-semibold">$18.69</p>
+                        <p class="card-text fw-bold text-success">Envío gratis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen de producto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">Chaquetas ligeras para hombre</a></h5>
+                        <p class="card-text text-limit-two-lines">Chaquetas ligeras, cortavientos de verano, abrigo de moda para golf al aire libre para hombres</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                ★★★★★
+                            </div>
+                            <div>
+                                <span class="text-secondary">(8.822)</span>
+                            </div>
+                        </div>
+                        <p class="card-text fw-semibold">$30.39</p>
+                        <p class="card-text fw-bold text-success">Envío gratis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen de producto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">Suéter de vellón de manga larga con cremallera de un cuarto para hombre</a></h5>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                ★★★☆☆
+                            </div>
+                            <div>
+                                <span class="text-secondary">(2.643)</span>
+                            </div>
+                        </div>
+                        <p class="card-text fw-semibold">$27.22</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen de producto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">Camisas de lino para hombre</a></h5>
+                        <p class="card-text text-limit-two-lines">Camisas casuales de manga corta con botones para hombre, camisa de playa de verano para boda</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                ★★★★☆
+                            </div>
+                            <div>
+                                <span class="text-secondary">(5.432)</span>
+                            </div>
+                        </div>
+                        <p class="card-text fw-semibold">$15.99</p>
+                        <p class="card-text fw-bold text-success">Envío gratis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Primer Carrusel de productos -->
+        <div class="row mb-4">
+            <div class="col">
+                <h5>Más resultados</h5>
+                <div id="productCarousel1" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                                <!-- Producto 1 -->
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 2 -->
+                                <div class="col d-none d-sm-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 3 -->
+                                <div class="col d-none d-md-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 4 -->
+                                <div class="col d-none d-lg-block d-xl-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 5 -->
+                                <div class="col d-none d-lg-block d-xl-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                                <!-- Producto 6 -->
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 7 -->
+                                <div class="col d-none d-sm-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 8 -->
+                                <div class="col d-none d-md-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 9 -->
+                                <div class="col d-none d-lg-block d-xl-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 10 -->
+                                <div class="col d-none d-lg-block d-xl-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controles del carrusel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon rounded" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon rounded" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo Carrusel de productos -->
+        <div class="row mb-4">
+            <div class="col">
+                <h5>Ofertas del día</h5>
+                <div id="productCarousel2" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                                <!-- Producto 1 -->
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 2 -->
+                                <div class="col d-none d-sm-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 3 -->
+                                <div class="col d-none d-md-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 4 -->
+                                <div class="col d-none d-lg-block d-xl-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 5 -->
+                                <div class="col d-none d-lg-block d-xl-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                                <!-- Producto 6 -->
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 7 -->
+                                <div class="col d-none d-sm-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 8 -->
+                                <div class="col d-none d-md-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 9 -->
+                                <div class="col d-none d-lg-block d-xl-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                                <!-- Producto 10 -->
+                                <div class="col d-none d-lg-block d-xl-block">
+                                    <div class="card h-100">
+                                        <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Descripcion del producto"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controles del carrusel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon rounded" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon rounded" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjetas exclusivas -->
+        <h5>Moda Femenina</h5>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4">
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen de producto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">Conjuntos de 2 piezas para mujer de manga larga</a></h5>
+                        <p class="card-text text-limit-two-lines">Sudaderas con media cremallera y pantalones deportivos</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                ★★★★★
+                            </div>
+                            <div>
+                                <span class="text-secondary">(14.038)</span>
+                            </div>
+                        </div>
+                        <p class="card-text fw-semibold">$49.99</p>
+                        <p class="card-text fw-bold text-success">Envío gratis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen de producto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">Sudaderas con capucha de gran tamaño para mujer</a></h5>
+                        <p class="card-text text-limit-two-lines">Sudaderas de forro polar, suéteres de manga larga, ropa de otoño con bolsillo</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                ★★★★☆
+                            </div>
+                            <div>
+                                <span class="text-secondary">(6.802)</span>
+                            </div>
+                        </div>
+                        <p class="card-text fw-semibold">$30.39</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen de producto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">Suéteres para mujer, camisas de manga larga a la moda</a></h5>
+                        <p class="card-text text-limit">Blusas tipo túnica de ajuste holgado 2023</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                ★★★★☆
+                            </div>
+                            <div>
+                                <span class="text-secondary">(7.376)</span>
+                            </div>
+                        </div>
+                        <p class="card-text fw-semibold">$27.22</p>
+                        <p class="card-text fw-bold text-success">Envío gratis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen de producto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">Camisas de manga larga con cuello redondo y bloque de color para mujer</a></h5>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                ★★★☆☆
+                            </div>
+                            <div>
+                                <span class="text-secondary">(4.332)</span>
+                            </div>
+                        </div>
+                        <p class="card-text fw-semibold">$19.50</p>
+                        <p class="card-text fw-bold text-success">Envío gratis</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo y copyright -->
+                <div class="col-12 col-md-3 text-center text-md-start">
+                    <svg class="bi mb-1" width="24" height="24"><use xlink:href="#logo"/></svg>
+                    <small class="d-block mb-3 text-secondary">© 2023–2024 AllTrade</small>
+                </div>
+                <!-- Secciones del sitio -->
+                <div class="col-6 col-md-2 text-center text-md-start">
+                    <h5>Atributos</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Curiosidades</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Rasgo al azar</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Rasgo del grupo</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Diferente</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Última vez</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 text-center text-md-start">
+                    <h5>Recursos</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Título</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Recursos</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Otro recurso</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Recurso final</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 text-center text-md-start">
+                    <h5>Industrias</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Negocio</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Educación</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Juego de azar</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 text-center text-md-start">
+                    <h5>Acerca de</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Equipo</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Ubicaciones</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Privacidad</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
